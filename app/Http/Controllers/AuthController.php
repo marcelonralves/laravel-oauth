@@ -18,8 +18,10 @@ class AuthController extends Controller
     {
         $provider = $this->repository->getProvider($provider);
         $provider->authCode($request->query('code'));
-        $getUserAuthenticated = $provider->showAuthenticatedUser(session()->get('auth_user'));
+        $showInfoUser = $provider->showAuthenticatedUser(session()->get('auth_login'));
 
-        return view('dashboard', compact('getUserAuthenticated'));
+        return view('dashboard', [
+            'user' => $showInfoUser
+        ]);
     }
 }
