@@ -23,7 +23,7 @@ class SpotifyService implements OAuthInterface
                 'form_params' => [
                     'grant_type' => 'authorization_code',
                     'code' => $code,
-                    'redirect_uri' => env('OAUTH_SPOTIFY_REDIRECT_URI')
+                    'redirect_uri' => env('OAUTH_SPOTIFY_REDIRECT_URI'),
                 ],
                 'headers' => [
                     'Accept' => 'application/json',

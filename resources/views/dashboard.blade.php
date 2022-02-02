@@ -1,10 +1,12 @@
 <!doctype html>
-<html>
+<html lang="pt-br">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+
 </head>
 <body>
 <div class="min-h-full">
@@ -26,7 +28,7 @@
 
                             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
 
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+                            <a href="/sair" class="text-gray-300 bg-red-400 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Desconectar</a>
                         </div>
                     </div>
                 </div>
@@ -59,14 +61,6 @@
                                 From: "transform opacity-100 scale-100"
                                 To: "transform opacity-0 scale-95"
                             -->
-                            <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
-                                <!-- Active: "bg-gray-100", Not Active: "" -->
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
-
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
-
-                                <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -142,6 +136,7 @@
             <h1 class="text-3xl font-bold text-gray-900">
                 Olá, {{ $user['name'] }}
             </h1>
+            <h2>Seu email: {{ $user['email'] }}</h2>
         </div>
     </header>
     <main>

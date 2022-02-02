@@ -24,4 +24,10 @@ class AuthController extends Controller
             'user' => $showInfoUser
         ]);
     }
+
+    public function logout()
+    {
+        session()->flush();
+        return redirect('/');
+    }
 }

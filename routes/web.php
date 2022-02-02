@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ViewController::class, 'home']);
 Route::get('/auth/{provider}', [AuthController::class, 'auth']);
+Route::get('/sair', [AuthController::class, 'logout']);
